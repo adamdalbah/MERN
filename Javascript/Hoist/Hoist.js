@@ -6,7 +6,9 @@
 //----------------------------
 
 //2- 
+// var needle;
 // function test(){
+//     var needle;
 //     var needle = 'magnet';
 //     console.log(needle);
 // }
@@ -16,6 +18,7 @@
 //----------------------------
 
 //3-
+// var brendan;
 // function print(){
 //     var brendan;
 //     brendan = 'only okay';
@@ -27,6 +30,7 @@
 //----------------------------
 
 //4-
+// var food;
 // function eat() {
 //     var food;
 //     food = 'half-chicken';
@@ -55,6 +59,7 @@
 //----------------------------
 
 //6-
+// var genre;
 // function rewind(){
 //     var genre;
 //     genre = "rock";
@@ -62,7 +67,6 @@
 //     genre = "r&b";
 //     console.log(genre);
 // }
-// var genre;
 // console.log(genre);
 // genre = "disco";
 // rewind();
@@ -78,7 +82,6 @@
 //     dojo = "burbank";
 //     console.log(dojo);
 // }
-// var dojo;
 // dojo = "san jose";
 // console.log(dojo);
 // learn();
