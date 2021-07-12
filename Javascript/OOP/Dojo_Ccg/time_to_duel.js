@@ -44,12 +44,24 @@ class Effect extends Card{
         
     }
 }
-
+//1
 const red_ninja = new Unit("Red Belt Ninja", 3, 4, 3);
-const black_ninja = new Unit("Black Belt Ninja", 4, 4, 5);
-
 const hard_algorithm = new Effect("Hard Algorithm", 2, "resilience", 3);
+hard_algorithm.effect(red_ninja);
+console.log(red_ninja.resilience);
+//2
+const black_ninja = new Unit("Black Belt Ninja", 4, 4, 5);
 const unhandled_promise_rejection = new Effect("Unhandled Promise Rejection", 1, "resilience", -2);
+unhandled_promise_rejection.effect(red_ninja);
+console.log(red_ninja.resilience);
+//3
 const pair_programming = new Effect("Pair Programming", 3, "power", 2);
+pair_programming.effect(red_ninja);
+console.log(red_ninja.power);
+//4
+red_ninja.attack(black_ninja);
+console.log(black_ninja.resilience);
+
+
 
 
