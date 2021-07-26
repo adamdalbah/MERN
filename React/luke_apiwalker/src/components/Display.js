@@ -10,6 +10,7 @@ const Display = (props) => {
     useEffect(() =>{
         axios.get(`https://swapi.dev/api/${title}/${id}`)
         .then(response=>{setResponseData(response.data)})
+        .catch(reject =>{setResponseData({error:"These aren't the droids you're looking for"})})
     },[title, id])
 
     return (
