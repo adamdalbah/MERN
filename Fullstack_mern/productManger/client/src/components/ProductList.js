@@ -7,9 +7,9 @@ const ProductList = (props) => {
             {props.products.map((product, index)=>{
                 return (
                     <>
-                        <p key={index}>{product.title}</p>
-                        <p key={index}>{product.price}</p>
-                        <p key={index}>{product.description}</p>
+                        <a href={`/products/${product._id}`}><p key={index}>{product.title}</p></a>     
+                        {/* <p key={index}>{product.price}</p>
+                        <p key={index}>{product.description}</p> */}
                         <hr/>
                     </>
                 )
