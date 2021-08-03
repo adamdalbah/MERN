@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const ProductForm = () => {
-    const [title, setTitle] = useState("");
-    const [price, setPrice] = useState();
-    const [description, setDescription] = useState("");
+const ProductForm = (props) => {
+    const {initialTitle, initialPrice, initialDescription, onSubmitProduct} = props;
+    const [title, setTitle] = useState(initialTitle);
+    const [price, setPrice] = useState(initialPrice);
+    const [description, setDescription] = useState(initialDescription);
 
     const titleHandler = e =>{
         setTitle(e.target.value);
@@ -20,14 +21,17 @@ const ProductForm = () => {
 
     const productHandler = e => {
         e.preventDefault();
-        axios.post('http://localhost:8000/api/products/new', {
-            title,
-            price,
-            description
-        })
-            .then(res => console.log(res))
-            .catch(err => console.log(err));
+        onSubmitProduct({title, price, description});
+        // axios.post('http://localhost:8000/api/products/new', {
+        //     title,
+        //     price,
+        //     description
+        // })
+        //     .then(res => console.log(res))
+        //     .catch(err => console.log(err));
     }
+
+
     return(
         <form onSubmit={productHandler}>
             <p>
@@ -42,7 +46,7 @@ const ProductForm = () => {
                 <label>Description:</label>
                 <textarea onChange={descHandler} value={description}></textarea>
             </p>
-            <input type="submit" value="Create Product"/>
+            <input type="submit" value="Submit"/>
 
         </form>
     )
