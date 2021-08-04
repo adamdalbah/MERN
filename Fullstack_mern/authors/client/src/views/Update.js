@@ -13,7 +13,7 @@ import AuthorForm from '../components/AuthorForm';
                 setAuthor(res.data);
                 setLoaded(true);
             })
-    }, [id])
+    }, [])
 
     const updateAuthor = author => {
         axios.put(`http://localhost:8000/api/author/:id`, author)
